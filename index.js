@@ -21,7 +21,8 @@
     const _0x3e09d7 = _0x1c864d => new Promise(_0x5da23c => _0x41d8de.question(_0x1c864d, _0x5da23c));
     const _0x1e9ef5 = () => {
       console.clear();
-      console.log(" 
+      console.log("""\x1b[1;36m 
+      
 \033[1;33m/$$      /$$ /$$$$$$$     
 \033[1;32m| $$$    /$$$| $$__  $$    
 \033[1;36m| $$$$  /$$$$| $$  \ $$    
