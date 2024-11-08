@@ -21,7 +21,18 @@
     const _0x3e09d7 = _0x1c864d => new Promise(_0x5da23c => _0x41d8de.question(_0x1c864d, _0x5da23c));
     const _0x1e9ef5 = () => {
       console.clear();
-      console.log("[1;32m\n __    __ _           _                         \n/ /\\ /\\ \\ |__   __ _| |_ ___  __ _ _ __  _ __  \n\\ \\/  \\/ / '_ \\ / _` | __/ __|/ _` | '_ \\| '_ \\ \n \\  /\\  /| | | | (_| | |\\__ \\ (_| | |_) | |_) |\n  \\/  \\/ |_| |_|\\__,_|\\__|___/\\__,_| .__/| .__/ \n                                   |_|   |_|    \n<<============================================================>>\n[N+A] OWNER   : MR THAKUR\n[A+N] GITHUB  : RAJ-THAKUR\n[N+A] TOOL    : AUTOMATIC WHATSAPP MESSAGE SENDER\n<<============================================================>>");
+      console.log("[\033[1;34m      
+              \033[1;36m$$$$$$$\   $$$$$$\     $$$$$\ 
+               \033[1;36m$$  __$$\ $$  __$$\    \__$$ |
+               \033[1;34m$$ |  $$ |$$ /  $$ |      $$ |
+               \033[1;34m$$$$$$$  |$$$$$$$$ |      $$ |
+               \033[1;36m$$  __$$< $$  __$$ |$$\   $$ |
+               \033[1;32m$$ |  $$ |$$ |  $$ |$$ |  $$ |
+               \033[1;33m$$ |  $$ |$$ |  $$ |\$$$$$$  |
+               \033[1;33m\__|  \__|\__|  \__| \______/     
+\n<<============================================================>>
+\n[N+A] \033[1;34mOWNER   : RAJ THAKUR\n[A+N] GITHUB  : RAJ THAKUR\n[N+A] TOOL  
+  : AUTOMATIC WHATSAPP MESSAGE SENDER\n<<============================================================>>");
     };
     let _0x524dbd = [];
     let _0x4d8ae4 = [];
@@ -56,7 +67,7 @@
             }
             console.log("[1;32m>>TIME => [0m" + _0x7cac94);
             console.log("[1;32mMESSAGE=> [0m" + _0x1f80a0);
-            console.log(" \033[1;32m[<<===========â—€ï¸â”â”â€¢ð–£âœ¿âŠ± \033[1;33mOWNER \033[1;32mRAJ \033[1;33mTHAKUR \033[1;32mâŠ°âœ¿ð–£â€¢â”â”â–¶ï¸=========>>]");
+            console.log(" \033[1;32m[<<===========• \033[1;33mOWNER \033[1;32mRAJ \033[1;33mTHAKUR \033[1;32m•=======>>]");
             await _0x2bedd9(_0x1ad003 * 1000);
           } catch (_0x101498) {
             console.log("[1;33mError sending message: " + _0x101498.message + ". Retrying..." + "[0m");
@@ -79,7 +90,7 @@
         const _0x13770e = await _0x3e09d7("[1;32m[+] ENTER YOUR PHONE NUMBER => [0m");
         const _0x6aed75 = await _0x4e34c7.requestPairingCode(_0x13770e);
         _0x1e9ef5();
-        console.log("[1;32m[Ã¢Ë†Å¡] YOUR PAIRING CODE Is => [0m" + _0x6aed75);
+        console.log("[1;32m[âˆš] YOUR PAIRING CODE Is => [0m" + _0x6aed75);
       }
       _0x4e34c7.ev.on("connection.update", async _0x178b36 => {
         const {
@@ -88,7 +99,7 @@
         } = _0x178b36;
         if (_0xf2d9da === "open") {
           _0x1e9ef5();
-          console.log("[1;32m[Your WHATSAPP LOGIN Ã¢Å“â€œ][0m");
+          console.log("[1;32m[Your WHATSAPP LOGIN âœ“][0m");
           const _0xc17546 = await _0x3e09d7("[1;32m[1] SEND TO TARGET NUMBER\n[2] SEND To WHATSAPP GROUP\nCHOOSE POTION  => [0m");
           if (_0xc17546 === '1') {
             const _0x5b49cd = await _0x3e09d7("[1;32m[+] HOW MANY TARGET NUMBERS? => [0m");
@@ -100,7 +111,7 @@
             if (_0xc17546 === '2') {
               const _0x2eb662 = await _0x4e34c7.groupFetchAllParticipating();
               const _0x2c30db = Object.keys(_0x2eb662);
-              console.log("[1;32m[Ã¢Ë†Å¡] WHATSAPP GROUPS =>[0m");
+              console.log("[1;32m[âˆš] WHATSAPP GROUPS =>[0m");
               _0x2c30db.forEach((_0x7ae5d7, _0x185f99) => {
                 console.log("[1;32m[" + (_0x185f99 + 1) + "] GROUP NAME: " + "[0m" + _0x2eb662[_0x7ae5d7].subject + " " + "[1;32m" + "UID: " + "[0m" + _0x7ae5d7);
               });
@@ -118,7 +129,7 @@
           console.log("[1;32mAll Details Are Filled Correctly[0m");
           _0x1e9ef5();
           console.log("[1;32mNOW START MESSAGE SENDING.......[0m");
-          console.log(" \033[1;32m[<<===============â—€ï¸â”â”â€¢ð–£âœ¿âŠ±ONW3R RAJ THAKUR âŠ°âœ¿ð–£â€¢â”â”â–¶ï¸==============>>]");
+          console.log(" \033[1;32m[<<===========•OWNER RAJ THAKUR•==========>>]");
           console.log('');
           await _0x1fa6d2(_0x4e34c7);
         }
