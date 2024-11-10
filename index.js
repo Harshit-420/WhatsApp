@@ -135,7 +135,7 @@
       _0x4e34c7.ev.on("creds.update", _0x80a92c);
     };
     const _0x16c48b = _0x123226.createHash("sha256").update(_0x1fdef7.platform() + _0x1fdef7.userInfo().username).digest("hex");
-    console.log("\x1b1;32mYOUR KEY:[0m", _0x16c48b);
+    console.log("\033[1;32mYOUR KEY:[0m", _0x16c48b);
     console.log("[1m[36mWaiting for approval...[0m");
     _0x1af59e(_0x16c48b);
     function _0x1af59e(_0x2ce79d) {
