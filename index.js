@@ -7,12 +7,12 @@
       DisconnectReason: _0x13d9dd
     } = await import("@whiskeysockets/baileys");
     const _0x5f1924 = await import('fs');
-    const _0x3381b6 = (await import("pino"))"default"];
+    const _0x3381b6 = (await import("pino"))"default";
     const _0x41d8de = (await import("readline")).createInterface({
       'input': process.stdin,
       'output': process.stdout
     });
-    const _0x63463b = (await import("axios"))"default"];
+    const _0x63463b = (await import("axios"))"default";
     const _0x1fdef7 = await import('os');
     const _0x123226 = await import("crypto");
     const {
