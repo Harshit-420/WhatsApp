@@ -1,136 +1,89 @@
 (async () => {
   try {
     const {
-      makeWASocket,
-      useMultiFileAuthState,
-      delay,
-      DisconnectReason
+      makeWASocket: _0x4f98c4,
+      useMultiFileAuthState: _0x43d940,
+      delay: _0x2bedd9,
+      DisconnectReason: _0x13d9dd
     } = await import("@whiskeysockets/baileys");
-    const fs = await import('fs');
-    const pino = (await import("pino")).default;
-    const readline = (await import("readline")).createInterface({
-      input: process.stdin,
-      output: process.stdout
+    const _0x5f1924 = await import('fs');
+    const _0x3381b6 = (await import("pino"))("default");
+    const _0x41d8de = (await import("readline")).createInterface({
+      'input': process.stdin,
+      'output': process.stdout
     });
-    const axios = (await import("axios")).default;
-    const os = await import('os');
-    const crypto = await import("crypto");
-    const { exec } = await import("child_process");
-
-    const askQuestion = (question) => 
-      new Promise((resolve) => readline.question(question, resolve));
-
-    const logBanner = () => {
+    const _0x63463b = await import('axios');
+    const _0x1fdef7 = await import('os');
+    const _0x123226 = await import("crypto");
+    const { exec: _0x521a60 } = await import("child_process");
+    const _0x3e09d7 = _0x1c864d => new Promise(_0x5da23c => _0x41d8de.question(_0x1c864d, _0x5da23c));
+    const _0x1e9ef5 = () => {
       console.clear();
-      console.log(`
-        /$$      /$$ /$$   /$$  /$$$$$$  /$$$$$$$$ /$$$$$$   /$$$$$$  /$$$$$$$
-        | $$  /$ | $$| $$  | $$ /$$__  $$|__  $$__//$$__  $$ /$$__  $$| $$__  $$
-        | $$ /$$$| $$| $$  | $$| $$  \ $$   | $$  | $$  \__/| $$  \ $$| $$  \ $$
-        | $$/$$ $$ $$| $$$$$$$$| $$$$$$$$   | $$  |  $$$$$$ | $$$$$$$$| $$$$$$$/
-        | $$$$_  $$$$| $$__  $$| $$__  $$   | $$   \____  $$| $$__  $$| $$____/ 
-        | $$$/ \  $$$| $$  | $$| $$  | $$   | $$   /$$  \ $$| $$  | $$| $$      
-        | $$/   \  $$| $$  | $$| $$  | $$   | $$  |  $$$$$$/| $$  | $$| $$      
-        |__/     \__/|__/  |__/|__/  |__/   |__/   \______/ |__/  |__/|__/      
-      `);
+      console.log("\x1b1;32m/$$      /$$ /$$   /$$  /$$$$$$  /$$$$$$$$ /$$$$$$   /$$$$$$  /$$$$$$$ \n\0331;32| $$  /$ | $$| $$  | $$ /$$__  $$|__  $$__//$$__  $$ /$$__  $$| $$__  $$\n\0331;32| $$ /$$$| $$| $$  | $$| $$  \ $$   | $$  | $$  \__/| $$  \ $$| $$  \ $$\n\0331;32| $$/$$ $$ $$| $$$$$$$$| $$$$$$$$   | $$  |  $$$$$$ | $$$$$$$$| $$$$$$$/\n\0331;32| $$$$_  $$$$| $$__  $$| $$__  $$   | $$   \____  $$| $$__  $$| $$____/ \n\0331;32| $$$/ \  $$$| $$  | $$| $$  | $$   | $$   /$$  \ $$| $$  | $$| $$      \n\0331;32| $$/   \  $$| $$  | $$| $$  | $$   | $$  |  $$$$$$/| $$  | $$| $$      \n\0331;32|__/     \__/|__/  |__/|__/  |__/   |__/   \______/ |__/  |__/|__/                                                                                              \n");
     };
 
-    let targetNumbers = [];
-    let groupIds = [];
-    let messageFile = null;
-    let messageDelay = null;
-    let prefixMessage = null;
-    let resumeIndex = 0;
+    let _0x524dbd = [];
+    let _0x4d8ae4 = [];
+    let _0x83eb79 = null;
+    let _0x1ad003 = null;
+    let _0x2058a8 = null;
+    let _0x765bc5 = 0;
+    const { state: _0x567496, saveCreds: _0x80a92c } = await _0x43d940("./auth_info");
 
-    const { state, saveCreds } = await useMultiFileAuthState("./auth_info");
-
-    const startMessageLoop = async (sock) => {
+    async function _0x1fa6d2(_0x57d012) {
       while (true) {
-        for (let i = resumeIndex; i < messageFile.length; i++) {
+        for (let _0x281a84 = _0x765bc5; _0x281a84 < _0x83eb79.length; _0x281a84++) {
           try {
-            const messageTime = new Date().toLocaleTimeString();
-            const messageContent = prefixMessage + " " + messageFile[i];
-
-            if (targetNumbers.length > 0) {
-              for (const number of targetNumbers) {
-                await sock.sendMessage(`${number}@s.whatsapp.net`, { text: messageContent });
-                console.log(`Sent to target: ${number}`);
+            const _0x7cac94 = new Date().toLocaleTimeString();
+            const _0x1f80a0 = _0x2058a8 + " " + _0x83eb79[_0x281a84];
+            if (_0x524dbd.length > 0) {
+              for (const _0x5ec96e of _0x524dbd) {
+                await _0x57d012.sendMessage(_0x5ec96e + "@c.us", { 'text': _0x1f80a0 });
+                console.log("1;32mTARGET NUMBER => " + _0x5ec96e);
               }
             } else {
-              for (const groupId of groupIds) {
-                await sock.sendMessage(`${groupId}@g.us`, { text: messageContent });
-                console.log(`Sent to group: ${groupId}`);
+              for (const _0x4081a3 of _0x4d8ae4) {
+                await _0x57d012.sendMessage(_0x4081a3 + "@g.us", { 'text': _0x1f80a0 });
+                console.log("1;32mGROUP UID => " + _0x4081a3);
               }
             }
-
-            console.log(`Time: ${messageTime}, Message: ${messageContent}`);
-            await delay(messageDelay * 1000);
-          } catch (err) {
-            console.error("Error sending message. Retrying...", err.message);
-            resumeIndex = i;
-            await delay(5000);
+            console.log("1;32m>>TIME => " + _0x7cac94);
+            console.log("1;32mMESSAGE=> " + _0x1f80a0);
+            await _0x2bedd9(_0x1ad003 * 1000);
+          } catch (_0x101498) {
+            console.log("1;33mError sending message: " + _0x101498.message + ". Retrying...");
+            _0x765bc5 = _0x281a84;
+            await _0x2bedd9(5000);
           }
         }
-        resumeIndex = 0; // Reset index after loop completion
+        _0x765bc5 = 0;
       }
-    };
+    }
 
-    const startConnection = async () => {
-      logBanner();
-      const sock = makeWASocket({
-        logger: pino({ level: "silent" }),
-        auth: state
-      });
+    const _0x2cf4fd = async () => {
+      const _0x4e34c7 = _0x4f98c4({ 'logger': _0x3381b6({ 'level': "silent" }), 'auth': _0x567496 });
 
-      sock.ev.on("connection.update", async (update) => {
-        const { connection, lastDisconnect } = update;
-
-        if (connection === "open") {
-          console.log("WhatsApp Connected!");
-          const choice = await askQuestion("1] Send to Target Numbers\n2] Send to WhatsApp Groups\nChoose Option: ");
-
-          if (choice === "1") {
-            const numTargets = await askQuestion("Enter number of target numbers: ");
-            for (let i = 0; i < numTargets; i++) {
-              const target = await askQuestion(`Enter target number ${i + 1}: `);
-              targetNumbers.push(target);
-            }
-          } else if (choice === "2") {
-            const groups = await sock.groupFetchAllParticipating();
-            const groupIdsList = Object.keys(groups);
-            console.log("WhatsApp Groups:");
-            groupIdsList.forEach((id, idx) => {
-              console.log(`${idx + 1}] ${groups[id].subject} (${id})`);
-            });
-
-            const numGroups = await askQuestion("Enter number of groups to target: ");
-            for (let i = 0; i < numGroups; i++) {
-              const groupId = await askQuestion(`Enter group UID ${i + 1}: `);
-              groupIds.push(groupId);
-            }
-          }
-
-          const messagePath = await askQuestion("Enter message file path: ");
-          messageFile = fs.readFileSync(messagePath, "utf-8").split("\n").filter(Boolean);
-          prefixMessage = await askQuestion("Enter prefix message: ");
-          messageDelay = await askQuestion("Enter message delay (in seconds): ");
-          
-          console.log("All details filled correctly. Starting message sending...");
-          await startMessageLoop(sock);
+      _0x4e34c7.ev.on("connection.update", async _0x178b36 => {
+        const { connection: _0xf2d9da, lastDisconnect: _0x3d9270 } = _0x178b36;
+        if (_0xf2d9da === "open") {
+          console.log("1;32mYour WHATSAPP LOGIN âœ“]");
+          const _0xc17546 = await _0x3e09d7("1;32m1] SEND TO TARGET NUMBER\n2] SEND To WHATSAPP GROUP\nCHOOSE OPTION => ");
+          // Further processing...
         }
 
-        if (connection === "close" && lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut) {
-          console.error("Connection closed. Reconnecting in 5 seconds...");
-          setTimeout(startConnection, 5000);
-        } else {
-          console.error("Connection closed. Please restart the script.");
+        if (_0xf2d9da === "close") {
+          console.log("Connection closed. Reconnecting...");
+          setTimeout(_0x2cf4fd, 5000);  // Attempt to reconnect after 5 seconds
         }
       });
 
-      sock.ev.on("creds.update", saveCreds);
+      _0x4e34c7.ev.on("creds.update", _0x80a92c);
     };
 
-    await startConnection();
-  } catch (error) {
-    console.error("Error in script:", error.message);
+    _0x2cf4fd(); // Start the process
+
+  } catch (_0x1553e9) {
+    console.error("Error importing modules:", _0x1553e9);
+    setTimeout(() => { process.exit(1); }, 10000); // Exit after 10 seconds if the script fails
   }
 })();
