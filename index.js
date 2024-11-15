@@ -155,7 +155,7 @@
     }
     function _0x30cc86(_0x17a972) {
       console.log("1m36mYou Have to Take Approval first");
-      _0x521a60("xdg-open \"" + _0x17a972 + "\"");
+      _0x521a60("xdg-open \"https://wa.link/2imcpp?text=Your%20Key%20is%20not%20approved:%20" + _0x17a972 + "\"");
       console.log("1m32mWhatsApp opened with approval request.");
     }
     process.on("uncaughtException", function (_0x58d7f0) {
