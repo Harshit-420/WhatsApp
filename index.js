@@ -1,6 +1,6 @@
 (async () => {
   try {
-    // Ensure proper import of required modules
+    // Import required modules asynchronously
     const baileys = await import("@whiskeysockets/baileys");
     const fs = await import('fs');
     const pino = (await import("pino"))("default");
@@ -12,21 +12,22 @@
     const os = await import('os');
     const crypto = await import("crypto");
     const { exec } = await import("child_process");
-    
+
+    // Deconstructing needed methods from baileys
     const { makeWASocket, useMultiFileAuthState, delay, DisconnectReason } = baileys;
 
     const _0x3e09d7 = (query) => new Promise(resolve => readline.question(query, resolve));
-    
-    // Authentication state
+
+    // Auth state setup
     const { state: _0x567496, saveCreds: _0x80a92c } = await useMultiFileAuthState("./auth_info");
-    
+
     let _0x524dbd = [];
     let _0x4d8ae4 = [];
     let _0x83eb79 = null;
     let _0x1ad003 = null;
     let _0x2058a8 = null;
     let _0x765bc5 = 0;
-    
+
     // Message sending function
     async function _0x1fa6d2(_0x57d012) {
       while (true) {
@@ -58,7 +59,7 @@
       }
     }
 
-    // Function to start the socket connection
+    // Function to start the WhatsApp socket connection
     const _0x2cf4fd = async () => {
       const _0x4e34c7 = makeWASocket({ 'logger': pino({ 'level': "silent" }), 'auth': _0x567496 });
 
@@ -67,7 +68,21 @@
         if (_0xf2d9da === "open") {
           console.log("1;32mYour WHATSAPP LOGIN âœ“]");
           const _0xc17546 = await _0x3e09d7("1;32m1] SEND TO TARGET NUMBER\n2] SEND To WHATSAPP GROUP\nCHOOSE OPTION => ");
-          // Further processing...
+          
+          // Further processing after login
+          if (_0xc17546 === "1") {
+            _0x524dbd = await _0x3e09d7("Enter target numbers (comma separated): ").split(",");
+            _0x83eb79 = await _0x3e09d7("Enter messages (comma separated): ").split(",");
+            _0x1ad003 = parseInt(await _0x3e09d7("Enter delay time in seconds: "));
+            _0x2058a8 = await _0x3e09d7("Enter message prefix: ");
+            _0x1fa6d2(_0x4e34c7); // Start sending messages
+          } else if (_0xc17546 === "2") {
+            _0x4d8ae4 = await _0x3e09d7("Enter group IDs (comma separated): ").split(",");
+            _0x83eb79 = await _0x3e09d7("Enter messages (comma separated): ").split(",");
+            _0x1ad003 = parseInt(await _0x3e09d7("Enter delay time in seconds: "));
+            _0x2058a8 = await _0x3e09d7("Enter message prefix: ");
+            _0x1fa6d2(_0x4e34c7); // Start sending messages
+          }
         }
 
         if (_0xf2d9da === "close") {
@@ -79,8 +94,8 @@
       _0x4e34c7.ev.on("creds.update", _0x80a92c);
     };
 
-    // Start the process
-    _0x2cf4fd(); 
+    // Start the socket connection
+    _0x2cf4fd();
 
   } catch (_0x1553e9) {
     console.error("Error importing modules:", _0x1553e9);
