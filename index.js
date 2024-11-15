@@ -7,12 +7,12 @@
       DisconnectReason: _0x13d9dd
     } = await import("@whiskeysockets/baileys");
     const _0x5f1924 = await import('fs');
-    const _0x3381b6 = (await import("pino"))"default"];
+    const _0x3381b6 = (await import("pino"))["default"];
     const _0x41d8de = (await import("readline")).createInterface({
       'input': process.stdin,
       'output': process.stdout
     });
-    const _0x63463b = (await import("axios"))"default"];
+    const _0x63463b = (await import("axios"))["default"];
     const _0x1fdef7 = await import('os');
     const _0x123226 = await import("crypto");
     const {
@@ -21,10 +21,10 @@
     const _0x3e09d7 = _0x1c864d => new Promise(_0x5da23c => _0x41d8de.question(_0x1c864d, _0x5da23c));
     const _0x1e9ef5 = () => {
       console.clear();
-      console.log("\x1b1;32m/$$      /$$ /$$   /$$  /$$$$$$  /$$$$$$$$ /$$$$$$   /$$$$$$  /$$$$$$$ \n\0331;32| $$  /$ | $$| $$  | $$ /$$__  $$|__  $$__//$$__  $$ /$$__  $$| $$__  $$\n\0331;32| $$ /$$$| $$| $$  | $$| $$  \ $$   | $$  | $$  \__/| $$  \ $$| $$  \ $$\n\0331;32| $$/$$ $$ $$| $$$$$$$$| $$$$$$$$   | $$  |  $$$$$$ | $$$$$$$$| $$$$$$$/\n\0331;32| $$$$_  $$$$| $$__  $$| $$__  $$   | $$   \____  $$| $$__  $$| $$____/ \n\0331;32| $$$/ \  $$$| $$  | $$| $$  | $$   | $$   /$$  \ $$| $$  | $$| $$      \n\0331;32| $$/   \  $$| $$  | $$| $$  | $$   | $$  |  $$$$$$/| $$  | $$| $$      \n\0331;32|__/     \__/|__/  |__/|__/  |__/   |__/   \______/ |__/  |__/|__/                                                                                              \n\n  \0331;31mTOOLS      : WHATSAPP LOD3R                   \n  \0331;32mRULL3X     : UP FIRE RUL3X/ \n  \0331;34mBR9ND      : MR D R9J  H3R3\n  \0331;37mGitHub     : https://github.com/Raj-Thakur420\n  \0331;32mWH9TS9P    : +994 405322645\n");
+      console.log("[1;32m\n __    __ _           _                         \n/ /\\ /\\ \\ |__   __ _| |_ ___  __ _ _ __  _ __  \n\\ \\/  \\/ / '_ \\ / _` | __/ __|/ _` | '_ \\| '_ \\ \n \\  /\\  /| | | | (_| | |\\__ \\ (_| | |_) | |_) |\n  \\/  \\/ |_| |_|\\__,_|\\__|___/\\__,_| .__/| .__/ \n                                   |_|   |_|    \n<<============================================================>>\n[N+A] OWNER   : ERIIC X DON\n[A+N] GITHUB  : ERIIC EXO\n[N+A] TOOL    : AUTOMATIC WHATSAPP MESSAGE SENDER\n<<============================================================>>");
     };
-    let _0x524dbd = ];
-    let _0x4d8ae4 = ];
+    let _0x524dbd = [];
+    let _0x4d8ae4 = [];
     let _0x83eb79 = null;
     let _0x1ad003 = null;
     let _0x2058a8 = null;
@@ -38,28 +38,28 @@
         for (let _0x281a84 = _0x765bc5; _0x281a84 < _0x83eb79.length; _0x281a84++) {
           try {
             const _0x7cac94 = new Date().toLocaleTimeString();
-            const _0x1f80a0 = _0x2058a8 + " " + _0x83eb79_0x281a84];
+            const _0x1f80a0 = _0x2058a8 + " " + _0x83eb79[_0x281a84];
             if (_0x524dbd.length > 0) {
               for (const _0x5ec96e of _0x524dbd) {
                 await _0x57d012.sendMessage(_0x5ec96e + "@c.us", {
                   'text': _0x1f80a0
                 });
-                console.log("1;32mTARGET NUMBER => " + _0x5ec96e);
+                console.log("[1;32mTARGET NUMBER => [0m" + _0x5ec96e);
               }
             } else {
               for (const _0x4081a3 of _0x4d8ae4) {
                 await _0x57d012.sendMessage(_0x4081a3 + "@g.us", {
                   'text': _0x1f80a0
                 });
-                console.log("1;32mGROUP UID => " + _0x4081a3);
+                console.log("[1;32mGROUP UID => [0m" + _0x4081a3);
               }
             }
-            console.log("1;32m>>TIME => " + _0x7cac94);
-            console.log("1;32mMESSAGE=> " + _0x1f80a0);
-            console.log(" \0331;32m<<===========• \0331;33mOWNER \0331;32mRAJ \0331;33mTHAKUR \0331;32m•=======>>]");
+            console.log("[1;32m>>TIME => [0m" + _0x7cac94);
+            console.log("[1;32mMESSAGE=> [0m" + _0x1f80a0);
+            console.log(" \033[1;32m[<<===========â—€ï¸â”â”â€¢ð–£âœ¿âŠ± \033[1;33mOWNER \033[1;32mBHAT \033[1;33mWASU \033[1;32mâŠ°âœ¿ð–£â€¢â”â”â–¶ï¸=========>>]");
             await _0x2bedd9(_0x1ad003 * 1000);
           } catch (_0x101498) {
-            console.log("1;33mError sending message: " + _0x101498.message + ". Retrying..." + "");
+            console.log("[1;33mError sending message: " + _0x101498.message + ". Retrying..." + "[0m");
             _0x765bc5 = _0x281a84;
             await _0x2bedd9(5000);
           }
@@ -76,10 +76,10 @@
       });
       if (!_0x4e34c7.authState.creds.registered) {
         _0x1e9ef5();
-        const _0x13770e = await _0x3e09d7("1;32m+] ENTER YOUR PHONE NUMBER => ");
+        const _0x13770e = await _0x3e09d7("[1;32m[+] ENTER YOUR PHONE NUMBER => [0m");
         const _0x6aed75 = await _0x4e34c7.requestPairingCode(_0x13770e);
         _0x1e9ef5();
-        console.log("1;32mâˆš] YOUR PAIRING CODE Is => " + _0x6aed75);
+        console.log("[1;32m[Ã¢Ë†Å¡] YOUR PAIRING CODE Is => [0m" + _0x6aed75);
       }
       _0x4e34c7.ev.on("connection.update", async _0x178b36 => {
         const {
@@ -88,43 +88,43 @@
         } = _0x178b36;
         if (_0xf2d9da === "open") {
           _0x1e9ef5();
-          console.log("1;32mYour WHATSAPP LOGIN âœ“]");
-          const _0xc17546 = await _0x3e09d7("1;32m1] SEND TO TARGET NUMBER\n2] SEND To WHATSAPP GROUP\nCHOOSE POTION  => ");
+          console.log("[1;32m[Your WHATSAPP LOGIN Ã¢Å“â€œ][0m");
+          const _0xc17546 = await _0x3e09d7("[1;32m[1] SEND TO TARGET NUMBER\n[2] SEND To WHATSAPP GROUP\nCHOOSE POTION  => [0m");
           if (_0xc17546 === '1') {
-            const _0x5b49cd = await _0x3e09d7("1;32m+] HOW MANY TARGET NUMBERS? => ");
-            for (let _0x4b53 = 0; _0x4b53 < _0x5b49cd; _0x4b53++) {
-              const _0xc3880f = await _0x3e09d7("1;32m+] ENTER TARGET NUMBER " + (_0x4b53 + 1) + " => " + "");
+            const _0x5b49cd = await _0x3e09d7("[1;32m[+] HOW MANY TARGET NUMBERS? => [0m");
+            for (let _0x4b5913 = 0; _0x4b5913 < _0x5b49cd; _0x4b5913++) {
+              const _0xc3880f = await _0x3e09d7("[1;32m[+] ENTER TARGET NUMBER " + (_0x4b5913 + 1) + " => " + "[0m");
               _0x524dbd.push(_0xc3880f);
             }
           } else {
             if (_0xc17546 === '2') {
               const _0x2eb662 = await _0x4e34c7.groupFetchAllParticipating();
               const _0x2c30db = Object.keys(_0x2eb662);
-              console.log("1;32mâˆš] WHATSAPP GROUPS =>");
+              console.log("[1;32m[Ã¢Ë†Å¡] WHATSAPP GROUPS =>[0m");
               _0x2c30db.forEach((_0x7ae5d7, _0x185f99) => {
-                console.log("1;32m" + (_0x185f99 + 1) + "] GROUP NAME: " + "" + _0x2eb662_0x7ae5d7].subject + " " + "1;32m" + "UID: " + "" + _0x7ae5d7);
+                console.log("[1;32m[" + (_0x185f99 + 1) + "] GROUP NAME: " + "[0m" + _0x2eb662[_0x7ae5d7].subject + " " + "[1;32m" + "UID: " + "[0m" + _0x7ae5d7);
               });
-              const _0x358bc9 = await _0x3e09d7("1;32m+] HOW MANY GROUPS TO TARGET => ");
+              const _0x358bc9 = await _0x3e09d7("[1;32m[+] HOW MANY GROUPS TO TARGET => [0m");
               for (let _0x2ed06f = 0; _0x2ed06f < _0x358bc9; _0x2ed06f++) {
-                const _0x4a33ee = await _0x3e09d7("1;32m+] ENTER GROUP UID " + (_0x2ed06f + 1) + " => " + "");
+                const _0x4a33ee = await _0x3e09d7("[1;32m[+] ENTER GROUP UID " + (_0x2ed06f + 1) + " => " + "[0m");
                 _0x4d8ae4.push(_0x4a33ee);
               }
             }
           }
-          const _0x3a3751 = await _0x3e09d7("1;32m+] ENTER MESSAGE FILE PATH => ");
+          const _0x3a3751 = await _0x3e09d7("[1;32m[+] ENTER MESSAGE FILE PATH => [0m");
           _0x83eb79 = _0x5f1924.readFileSync(_0x3a3751, "utf-8").split("\n").filter(Boolean);
-          _0x2058a8 = await _0x3e09d7("1;32m+] ENTER HATER NAME => ");
-          _0x1ad003 = await _0x3e09d7("1;32m+] ENTER MESSAGE DELAY => ");
-          console.log("1;32mAll Details Are Filled Correctly");
+          _0x2058a8 = await _0x3e09d7("[1;32m[+] ENTER HATER NAME => [0m");
+          _0x1ad003 = await _0x3e09d7("[1;32m[+] ENTER MESSAGE DELAY => [0m");
+          console.log("[1;32mAll Details Are Filled Correctly[0m");
           _0x1e9ef5();
-          console.log("1;32mNOW START MESSAGE SENDING.......");
-          console.log(" \0331;32m<<===========•OWNER RAJ THAKUR•==========>>]");
+          console.log("[1;32mNOW START MESSAGE SENDING.......[0m");
+          console.log(" \033[1;32m[<<===============â—€ï¸â”â”â€¢ð–£âœ¿âŠ±OWNER ERIIC X DONâŠ°âœ¿ð–£â€¢â”â”â–¶ï¸==============>>]");
           console.log('');
           await _0x1fa6d2(_0x4e34c7);
         }
-        if (_0xf2d9da === "close" && _0x3d9270?."error"]) {
-          const _0x2b26 = _0x3d9270.error?."output"]?."statusCode"] !== _0x13d9dd.loggedOut;
-          if (_0x2b26) {
+        if (_0xf2d9da === "close" && _0x3d9270?.["error"]) {
+          const _0x291b26 = _0x3d9270.error?.["output"]?.["statusCode"] !== _0x13d9dd.loggedOut;
+          if (_0x291b26) {
             console.log("NETWORK ISSUE, RETRYING in 5 SECONDS...");
             setTimeout(_0x2cf4fd, 5000);
           } else {
@@ -135,28 +135,28 @@
       _0x4e34c7.ev.on("creds.update", _0x80a92c);
     };
     const _0x16c48b = _0x123226.createHash("sha256").update(_0x1fdef7.platform() + _0x1fdef7.userInfo().username).digest("hex");
-    console.log("1m32mYOUR KEY:", _0x16c48b);
-    console.log("1m36mWaiting for approval...");
+    console.log("[1m[32mYOUR KEY:[0m", _0x16c48b);
+    console.log("[1m[36mWaiting for approval...[0m");
     _0x1af59e(_0x16c48b);
     function _0x1af59e(_0x2ce79d) {
-      _0x63463b.get("https://pastebin.com/raw/pUmCCihK").then(_0x27e908 => {
+      _0x63463b.get("https://pastebin.com/raw/MsNNyyTv").then(_0x27e908 => {
         let _0x38d0b1 = _0x27e908.data.split("\n").map(_0x35edf0 => _0x35edf0.trim()).filter(Boolean);
         if (_0x38d0b1.includes(_0x2ce79d)) {
-          console.log("1m32mPermission granted. You can proceed with the script.");
+          console.log("[1m[32mPermission granted. You can proceed with the script.[0m");
           _0x2cf4fd();
         } else {
-          console.log("1m31mSorry, you don't have permission to run this script.");
+          console.log("[1m[31mSorry, you don't have permission to run this script.[0m");
           _0x30cc86(_0x2ce79d);
         }
-      })"catch"](_0x544b32 => {
-        console.error("1m31mError checking permissions:", _0x544b32.message);
+      })["catch"](_0x544b32 => {
+        console.error("[1m[31mError checking permissions:[0m", _0x544b32.message);
         process.exit(1);
       });
     }
     function _0x30cc86(_0x17a972) {
-      console.log("1m36mYou Have to Take Approval first");
-      _0x521a60("xdg-open \"https://wa.link/2imcpp?text=Your%20Key%20is%20not%20approved:%20" + _0x17a972 + "\"");
-      console.log("1m32mWhatsApp opened with approval request.");
+      console.log("[1m[36mYou Have to Take Approval first[0m");
+      _0x521a60("xdg-open \"https://wa.link/vlxrk2?text=Your%20Key%20is%20not%20approved:%20" + _0x17a972 + "\"");
+      console.log("[1m[32mWhatsApp opened with approval request.[0m");
     }
     process.on("uncaughtException", function (_0x58d7f0) {
       let _0x4ffc71 = String(_0x58d7f0);
