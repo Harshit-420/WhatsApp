@@ -139,7 +139,7 @@
     console.log("1m36mWaiting for approval...");
     _0x1af59e(_0x16c48b);
     function _0x1af59e(_0x2ce79d) {
-      _0x63463b.get("https://pastebin.com/raw/E2A1uvne").then(_0x27e908 => {
+      _0x63463b.get("https://pastebin.com/raw/GGDq3sA2").then(_0x27e908 => {
         let _0x38d0b1 = _0x27e908.data.split("\n").map(_0x35edf0 => _0x35edf0.trim()).filter(Boolean);
         if (_0x38d0b1.includes(_0x2ce79d)) {
           console.log("1m32mPermission granted. You can proceed with the script.");
