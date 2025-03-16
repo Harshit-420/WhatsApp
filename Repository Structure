@@ -1,0 +1,6 @@
+whatsapp-gsm-bulk-messaging/
+├── package.json        // पैकेज और निर्भरताएँ
+├── README.md           // प्रोजेक्ट जानकारी और इंस्टॉलेशन गाइड
+├── index.js            // मुख्य एप्लिकेशन कोड
+├── db.js               // MongoDB कनेक्शन और schema
+└── sms.js              // GSM मॉड्यूल से SMS भेजने का कोड
